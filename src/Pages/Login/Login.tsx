@@ -1,29 +1,17 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import {Button, Checkbox, Col, Divider, Image, Input, Layout, Row, Space, Typography, Form} from "antd";
-import Focus from "../../Assets/Focus.png"
+import {Button, Checkbox, Col, Divider, Input, Layout, Row, Typography, Form} from "antd";
+
+import BoxWhite from "../../Components/BoxWhite/BoxWhite";
+import BoxBlue from "../../Components/BoxBlue/BoxBlue";
+
 
 const { Content } = Layout
 const {Title, Text, Paragraph, Link} = Typography
+const typeStyle = BoxWhite()
 
-const styleBoxWhite_BigDevice = {
-    backgroundColor: "#ffffff",
-    height: "562px",
-    maxHeight: "562px",
-    maxWidth: "396px",
-    position: "absolute",
-    left: "50%",
-    display: "flex",
-    top:-35
-}
+const boxWhite_SmallScreen = typeStyle[0]
+const boxWhite_BigScreen = typeStyle[1]
 
-const styleBoxWhite_SmallDevice = {
-    backgroundColor: "#ffffff",
-    height: "562px",
-    maxHeight: "562px",
-    maxWidth: "396px",
-    display: "flex",
-    top:-35
-}
 
 
 const boxWhite = (style: any) => {
@@ -114,39 +102,6 @@ const boxWhite = (style: any) => {
     )
 }
 
-const boxBlue = (formLogin: any, style: any) => {
-    return (
-        <>
-        <div style={{
-            backgroundColor: "#124051",
-            maxHeight: "494px",
-            maxWidth: "813px",
-            height: "494px",
-            width: "813px",
-            position: "relative",
-            justifyItems: "center",
-            alignItems: "center"
-        }}>
-            <Row align={"middle"} style={{ height: "100%"}}>
-                <Col span={12} style={{padding: "2.5rem"}}>
-                    <Row justify={"center"}>
-                        <img src={Focus} style={{ width: "80%"}}/>
-                    </Row>
-                    <Row justify={"center"} style={{marginTop: "1.5rem"}}>
-                        <Title level={3} style={{ color: "#DFF1F9"}}>Profiling | Intelligence</Title>
-                    </Row>
-                    <Row justify={"center"}>
-                        <Title level={5} style={{ color: "#DFF1F9"}}>The art of personalized experiences</Title>
-                    </Row>
-                </Col>
-            </Row>
-        </div>
-            {formLogin(style)}
-        </>
-    )
-}
-
-
 export default function Login(){
 
     return (
@@ -155,7 +110,7 @@ export default function Login(){
                 {/* Login for Big Views - START */}
                 <Col xs={0} sm={0} md={0} lg={24} xl={24} xxl={24}>
                     <Row justify={"center"}>
-                        {boxBlue(boxWhite, styleBoxWhite_BigDevice)}
+                        {BoxBlue(boxWhite, boxWhite_BigScreen)}
                     </Row>
                 </Col>
                 {/* Login for Big Views - START */}
@@ -163,7 +118,7 @@ export default function Login(){
                 {/* Login for Small Views - START */}
                 <Col xs={24} sm={24} md={24} lg={0} xl={0} xxl={0}>
                     <Row justify={"center"}>
-                        {boxWhite(styleBoxWhite_SmallDevice)}
+                        {boxWhite(boxWhite_SmallScreen)}
                     </Row>
                 </Col>
                 {/* Login for Small Views - END */}
