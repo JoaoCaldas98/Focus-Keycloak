@@ -1,3 +1,4 @@
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import {Button, Checkbox, Col, Divider, Image, Input, Layout, Row, Space, Typography, Form} from "antd";
 import Focus from "../../Assets/Focus.png"
 
@@ -50,21 +51,22 @@ const boxWhite = (style: any) => {
 
                 {/* FORM - START */}
                     <Form
-                        name="basic"
+                        name="login"
                         labelCol={{ span: 24 }}
                         wrapperCol={{ span: 24 }}
                         initialValues={{ remember: true }}
                         onFinish={onFinish}
                         onFinishFailed={onFinishFailed}
                         autoComplete="off"
+                        className="login-form"
                     >
                         <Form.Item
                             id="username"
-                            label="Username"
+                            label="Email/User ID"
                             name="username"
-                            rules={[{ required: true, message: 'Please input your username!' }]}
+                            rules={[{ required: true, message: 'Please input your email/user id!' }]}
                         >
-                            <Input />
+                            <Input prefix={<UserOutlined className="site-form-item-icon" />} />
                         </Form.Item>
 
                         <Form.Item
@@ -73,12 +75,20 @@ const boxWhite = (style: any) => {
                             name="password"
                             rules={[{ required: true, message: 'Please input your password!' }]}
                         >
-                            <Input.Password />
+                            <Input
+                                prefix={<LockOutlined className="site-form-item-icon" />}
+                                type="password"
+                            />
                         </Form.Item>
 
-                        <Form.Item name="remember" valuePropName="checked" wrapperCol={{  span: 12 }} id="remember">
+                        <Row justify={"space-between"} style={{ marginBottom: "2rem"}}>
+                        <Form.Item name="remember" valuePropName="checked" noStyle id="remember">
                             <Checkbox>Remember me</Checkbox>
                         </Form.Item>
+                            <a className="login-form-forgot" href="" style={{ textAlign: "center"}}>
+                                Forgot password?
+                            </a>
+                        </Row>
 
                         <Form.Item wrapperCol={{ span: 24 }} id="submit">
                             <Button style={{ width: "100%"}} size={"large"} htmlType="submit" type="primary">
