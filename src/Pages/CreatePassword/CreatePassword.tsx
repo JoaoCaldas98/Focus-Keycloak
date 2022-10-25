@@ -49,33 +49,45 @@ const boxCreateNewPassword = (style: any) => {
                             id="password"
                             label="New password"
                             name="password"
-                            rules={[{ required: true, message: 'Please input your password!' }]}
+                            hasFeedback
+                            rules={[
+                                { required: true, message: 'Please input your password!' },
+                                {min: 8, message: "Password is less thant 8 characters."},
+                                {max: 16, message: "Password is longer thant 16 characters."},
+                                {pattern: new RegExp(/^[a-zA-Z\d@~`!@#$%^&*()_=+\\\\';:\"\\/?>.<,-]+$/i), message: "Character not allowed!"}
+                            ]}
                         >
-                            <Input
+                            <Input.Password
                                 prefix={<LockOutlined className="site-form-item-icon" />}
                                 type="password"
                             />
                         </Form.Item>
 
                         <Form.Item
-                            id="confirm_password"
-                            label="Confirm new password"
-                            name="password"
-                            rules={[{ required: true, message: 'Please confirm your new password!' }]}
+                            name="confirm"
+                            label="Confirm Password"
+                            dependencies={['password']}
+                            hasFeedback
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Please confirm your password!',
+                                },
+                                ({ getFieldValue }) => ({
+                                    validator(_, value) {
+                                        if (!value || getFieldValue('password') === value) {
+                                            return Promise.resolve();
+                                        }
+                                        return Promise.reject(new Error('Should match the new password.'));
+                                    },
+                                }),
+                            ]}
                         >
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="password"
-                            />
+                            <Input.Password prefix={<LockOutlined className="site-form-item-icon" />}/>
                         </Form.Item>
 
-                        <Row justify={"space-between"} style={{ marginBottom: "2rem"}}>
-                            <Form.Item name="remember" valuePropName="checked" noStyle id="remember">
-                                <Checkbox>I've read and agree to <a href={"/"}>terms & conditions</a></Checkbox>
-                            </Form.Item>
-                        </Row>
 
-                        <Form.Item wrapperCol={{ span: 24 }} id="submit" style={{ marginTop: "2rem"}}>
+                        <Form.Item wrapperCol={{ span: 24 }} id="submit" style={{ marginTop: "2.500rem"}}>
                             <Button style={{ width: "100%"}} size={"large"} htmlType="submit" type="primary">
                                 Confirm and login
                             </Button>
