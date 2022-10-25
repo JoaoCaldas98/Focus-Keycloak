@@ -1,4 +1,5 @@
 import {Button, Col, Form, Input, Layout, Row, Typography} from "antd";
+import { useNavigate } from "react-router-dom";
 
 import BoxBlue from "../../Components/BoxBlue/BoxBlue";
 import BoxWhite from "../../Components/BoxWhite/BoxWhite";
@@ -12,11 +13,13 @@ const boxWhite_BigScreen = typeStyle[1]
 
 
 const boxForgotPassword = (style: any) => {
-    //const [ form ] = Form.useForm()
-    // console.log(form)
+    // const navigate = useNavigate()
 
     const onFinish = (values: any) => {
         console.log("Username: (string)", values.username)
+        if ( values.username.includes("@telecom.com")){
+           // navigate("/checkyouremail")
+        }
     };
 
     const onFinishFailed = (errorInfo: any) => {
