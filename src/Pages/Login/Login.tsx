@@ -73,7 +73,7 @@ const boxWhite = (style: any) => {
                         <Form.Item name="remember" valuePropName="checked" noStyle id="remember">
                             <Checkbox>Remember me</Checkbox>
                         </Form.Item>
-                            <a className="login-form-forgot" href="" style={{ textAlign: "center"}}>
+                            <a className="login-form-forgot" href="/forgotpassword" style={{ textAlign: "center"}}>
                                 Forgot password?
                             </a>
                         </Row>
