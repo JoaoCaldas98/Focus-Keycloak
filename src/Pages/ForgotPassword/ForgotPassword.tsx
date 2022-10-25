@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import BoxBlue from "../../Components/BoxBlue/BoxBlue";
 import BoxWhite from "../../Components/BoxWhite/BoxWhite";
-import { UserOutlined } from "@ant-design/icons";
+import { MailOutlined } from "@ant-design/icons";
 
 const {Title, Paragraph } = Typography
 
@@ -58,7 +58,7 @@ const boxForgotPassword = (style: any) => {
                             name="username"
                             rules={[{ required: true, message: 'Please input your email!' }]}
                         >
-                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder={"email@example.com"}/>
+                            <Input prefix={<MailOutlined className="site-form-item-icon" />} placeholder={"email@example.com"}/>
                         </Form.Item>
 
 

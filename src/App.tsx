@@ -8,6 +8,7 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import CheckYourEmail from "./Pages/ForgotPassword/CheckYourEmail";
 import CreatePassword from "./Pages/CreatePassword/CreatePassword";
 import TermsAndConditions from "./Pages/TermsAndConditions/TermsAndConditions";
+import TwoFactorAuthentication from "./Pages/TwoFactorAuthentication/TwoFactorAuthentication";
 import './App.css';
 
 const { Content } = Layout
@@ -21,6 +22,7 @@ function App() {
                 <Route path={"/checkyouremail"} element={<CheckYourEmail />}/>
                 <Route path={"/createpassword"} element={<CreatePassword />}/>
                 <Route path={"/termsandconditions"} element={<TermsAndConditions />} />
+                <Route path={"/twofactorauthentication"} element={< TwoFactorAuthentication />} />
               </Routes>
           </Router>
   );
