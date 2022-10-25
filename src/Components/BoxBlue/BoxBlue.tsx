@@ -1,5 +1,7 @@
 import {Col, Row, Typography } from "antd";
 import Focus from "../../Assets/Focus.png";
+import SelectLanguage from "../SelectLanguage/SelectLanguage";
+import {Content} from "antd/es/layout/layout";
 
 const { Title } = Typography
 
@@ -16,6 +18,10 @@ export default function BoxBlue( boxWhite: any, styleBoxWhite: any){
                 justifyItems: "center",
                 alignItems: "center"
             }}>
+                <Col>
+                    <Content style={{ marginBottom: "4rem"}}>
+                {SelectLanguage(120)}
+                    </Content>
                 <Row align={"middle"} style={{ height: "100%"}}>
                     <Col span={12} style={{padding: "2.5rem"}}>
                         <Row justify={"center"}>
@@ -29,6 +35,7 @@ export default function BoxBlue( boxWhite: any, styleBoxWhite: any){
                         </Row>
                     </Col>
                 </Row>
+                </Col>
             </div>
             {boxWhite(styleBoxWhite)}
         </>
