@@ -58,12 +58,11 @@ const boxForgotPassword = (style: any) => {
                             name="username"
                             rules={[{ required: true, message: 'Please input your email!' }]}
                         >
-                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder={"email@telecom.pt"}/>
+                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder={"email@example.com"}/>
                         </Form.Item>
 
 
-
-                        <Form.Item wrapperCol={{ span: 24 }} id="submit">
+                        <Form.Item wrapperCol={{ span: 24 }} style={{ marginTop: "3rem"}} id="submit">
                             <Button style={{ width: "100%", marginBottom: "0.5rem"}} size={"large"} htmlType="submit" type="primary">
                                 Reset Password
                             </Button>
