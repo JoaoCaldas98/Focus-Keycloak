@@ -13,7 +13,7 @@ export default function BoxWhite(){
         backgroundColor: "#ffffff",
         height: "562px",
         maxHeight: "562px",
-        maxWidth: "396px",
+        width: "396px",
         display: "flex",
         top:-35
     }
@@ -23,7 +23,7 @@ export default function BoxWhite(){
         backgroundColor: "#ffffff",
         height: "562px",
         maxHeight: "562px",
-        maxWidth: "396px",
+        width: "375px",
         position: "absolute",
         left: "50%",
         display: "flex",

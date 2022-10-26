@@ -24,7 +24,7 @@ function App() {
                 <Route path={"/createpassword"} element={<CreatePassword />}/>
                 <Route path={"/termsandconditions"} element={<TermsAndConditions />} />
                 <Route path={"/twofactorauthentication"} element={< TwoFactorAuthentication />} />
-                  <Route path={"/error"} element={< Error />} />
+                <Route path={"/error"} element={< Error />} />
               </Routes>
           </Router>
   );

@@ -16,7 +16,7 @@ const boxCheckYourEmail = (style: any) => {
         <div style={style}>
             <Col style={{padding: "2.5rem"}}>
                 <Row justify={"center"}>
-                    <Title>Check your email</Title>
+                    <Title level={2}>Check your email</Title>
                 </Row>
                 <Row justify={"center"} style={{ marginBottom: "1.875rem", marginTop: "1.300rem"}}>
                     <MailOutlined style={{ fontSize: '36px', color: '#00819F' }}/>

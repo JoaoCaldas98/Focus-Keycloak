@@ -21,10 +21,21 @@ const boxWhite = (style: any) =>{
                     <Title level={2}>Terms and Conditions</Title>
                 </Row>
                 <Row justify={"start"}>
-                    <Text>Please Login to your account.</Text>
+                    <div style={{ overflow: "scroll", height: "380px", overflowX: "hidden"}}>
+                    <Text>Possimus eius ipsa ut labore ut libero et eum voluptas. Repellat illum harum saepe qui totam est odit. Accusamus rerum omnis qui sint similique impedit sit quia. Nesciunt sit et est. Id assumenda et consequatur temporibus quas.
+
+                        Esse quos tempora nam expedita consectetur aut qui. Accusamus tenetur accusantium sunt iure maxime accusantium fuga magnam. Asperiores dolores quis expedita sint nesciunt sint veniam. Rerum aperiam iure possimus ea esse ex quas voluptate.
+
+                        Rerum vero ut nam sunt. Quas molestias doloribus dolores id aperiam et. Amet sunt doloremque rerum dignissimos quis iusto id. Eaque harum laborum quisquam corporis autem perferendis.
+                        Possimus eius ipsa ut labore ut libero et eum voluptas. Repellat illum harum saepe qui totam est odit. Accusamus rerum omnis qui sint similique impedit sit quia. Nesciunt sit et est. Id assumenda et consequatur temporibus quas.
+
+                        Esse quos tempora nam expedita consectetur aut qui. Accusamus tenetur accusantium sunt iure maxime accusantium fuga magnam. Asperiores dolores quis expedita sint nesciunt sint veniam. Rerum aperiam iure possimus ea esse ex quas voluptate.
+
+                        Rerum vero ut nam sunt. Quas molestias doloribus dolores id aperiam et. Amet sunt doloremque rerum dignissimos quis iusto id. Eaque harum laborum quisquam corporis autem perferendis.</Text>
+                    </div>
                 </Row>
 
-                <Row justify={"end"}>
+                <Row justify={"end"} style={{ marginTop: "1.5rem"}}>
                     <Button style={{ marginRight: "0.5rem"}} type={"default"}>Decline</Button>
                     <Button type={"primary"}>Accept</Button>
                 </Row>
